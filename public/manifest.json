@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "SFS-MOE",
+  "version": "0.0.1",
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "512": "/static/logo.png"
+  },
+  "permissions": [
+    "https://vu.sfc.keio.ac.jp/"
+  ]
+}
