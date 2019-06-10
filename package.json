@@ -9,18 +9,20 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@types/chrome": "0.0.86",
     "core-js": "^2.6.5",
     "element-ui": "2.8.2",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
+    "query-string": "^6.5.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
+    "typed-rest-client": "^1.4.0",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-i18n": "^8.11.2",
     "vue-property-decorator": "^8.1.0",
-    "vue-router": "^3.0.3",
-    "vuex": "^3.0.1"
+    "vue-router": "^3.0.3"
   },
   "devDependencies": {
     "@types/jest": "^23.1.4",

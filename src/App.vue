@@ -19,7 +19,11 @@
           i.el-icon-baseball
           span(slot="title")
             | {{ $t('goToWellness') }}
-        el-submenu(index="4")
+        el-menu-item(index="5")
+          i.el-icon-key
+          span(slot="title")
+            | 登出
+        el-submenu(index="6")
           template(slot="title")
             i.el-icon-chat-line-square
             span(slot="title")
@@ -29,7 +33,7 @@
               | Language
             el-menu-item
               | 日本語 (WIP)
-            el-menu-item
+            el-menu-item(@click="setLang('en-us')")
               | English
             el-menu-item
               | हिंदी (WIP)
@@ -39,19 +43,21 @@
               | ภาษาไทย
             el-menu-item
               | Tiếng việt (WIP)
-            el-menu-item
+            el-menu-item(@click="setLang('zh-cn')")
               | 简体中文
             el-menu-item
               | 繁體中文
             el-menu-item(@click="navigate('https://t.me/joinchat/BZajARWmEBaqW-4jpYXzJA')")
               | Contribute Your Language...
     el-container
-      el-main
+      el-main.main
         router-view
-      el-footer
-        | Made with ❤️️ by 
-        a(href="https://github.com/keio-moe")
-          | keio-moe
+      el-footer.footer
+        img.logo(src="/static/logo.png")
+        span.footer-span
+          | Made with ❤️️ by 
+          a(href="https://github.com/keio-moe")
+            | keio.moe
 </template>
 
 <script lang="ts">
@@ -60,12 +66,15 @@ import { Component, Vue } from 'vue-property-decorator';
 @Component({})
 export default class Home extends Vue {
   private navigate(url: string) { window.open(url); }
+  private setLang(lang: string) {
+    this.$i18n.locale = lang;
+    window.localStorage.setItem('language', lang);
+  }
 }
 </script>
 
 <style lang="stylus">
 #app
-  text-align center
   color #2c3e50
   width 800px
   height 600px
@@ -80,6 +89,18 @@ body
   height 600px
   position fixed
 
+.main
+  margin-left 70px
+
 .menu
   height 100%
+
+.footer
+  text-align center
+
+.logo
+  width 20px
+  height 20px
+  vertical-align middle
+  margin 0 10px 0 0
 </style>

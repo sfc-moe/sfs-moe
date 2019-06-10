@@ -9,6 +9,7 @@
     "512": "/static/logo.png"
   },
   "permissions": [
+    "storage",
     "https://vu.sfc.keio.ac.jp/"
   ]
 }
