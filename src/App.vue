@@ -85,6 +85,9 @@ export default class Home extends Vue {
 
 body
   margin 0
+  padding 0
+  width 700px
+  height 600px
   font-family "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
@@ -95,12 +98,12 @@ body
 
 .main
   margin-left 70px
-  height: 600px
 
 .menu
   height 100%
 
 .footer
+  padding 0
   text-align center
 
 .logo
