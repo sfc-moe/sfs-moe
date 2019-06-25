@@ -35,8 +35,8 @@
           el-menu-item-group
             span(slot="title")
               | Language
-            el-menu-item
-              | 日本語 (WIP)
+            el-menu-item(@click="setLang('ja-jp')")
+              | 日本語
             el-menu-item(@click="setLang('en-us')")
               | English
             el-menu-item
