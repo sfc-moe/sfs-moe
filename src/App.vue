@@ -80,7 +80,7 @@ export default class Home extends Vue {
 <style lang="stylus">
 #app
   color #2c3e50
-  width 800px
+  width 700px
   height 600px
 
 body
