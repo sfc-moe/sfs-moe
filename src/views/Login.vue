@@ -61,6 +61,7 @@ export default class Login extends Vue {
     const url = meta.attributes.getNamedItem('content')!.nodeValue!.slice(7);
     const params = queryString.parse(new URL(url).search);
     await this.sfsAuth.setToken(params.id as string);
+    this.$router.push('/assignments');
   }
 
   private async fetchStorage() {

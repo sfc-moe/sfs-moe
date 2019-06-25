@@ -91,6 +91,7 @@ body
 
 .main
   margin-left 70px
+  height: 600px
 
 .menu
   height 100%

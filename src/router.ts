@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
+import Assignments from './views/Assignments.vue';
 import Login from './views/Login.vue';
-import Home from './views/Home.vue';
 
 Vue.use(Router);
 
@@ -19,5 +19,10 @@ export default new Router({
       name: 'Login',
       component: Login,
     },
+    {
+      path: '/assignments',
+      name: 'Assignments',
+      component: Assignments,
+    }
   ],
 });
