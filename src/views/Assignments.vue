@@ -61,7 +61,7 @@ export default class Assignments extends Vue {
   private assignments: Assignment[] = [];
 
   private mounted() {
-    this.fetch();
+    this.fetchAssignments();
   }
 
   private get assignmentsUpcoming(): Assignment[] {
@@ -87,7 +87,7 @@ export default class Assignments extends Vue {
       .reverse();
   }
 
-  private async fetch() {
+  private async fetchAssignments() {
     const loading = this.$loading({
       lock: true,
       text: 'Loading',

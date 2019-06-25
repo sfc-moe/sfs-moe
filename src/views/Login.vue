@@ -3,22 +3,22 @@
   .logo-container
     img.logo(src="/static/logo.png")
   el-form.form(label-position="right", label-width="120px")
-    el-form-item(label="CNS 用户名")
+    el-form-item(:label="$t('cnsUsername')")
       el-input(v-model="username")
-    el-form-item(label="CNS 密码")
+    el-form-item(:label="$t('cnsPassword')")
       el-input(type="password", v-model="password")
     el-form-item.form-center
       span
         i.el-icon-lock
       span.security-note
-        | CNS 用户名密码只会被保存在插件本地，不会被发送给任何第三方。
-    el-form-item(label="记住密码")
+        | {{ $t('passwordSecurity') }}
+    el-form-item(:label="$t('rememberPassword')")
       el-switch(v-model="autoLogin")
     el-form-item
       el-button(type="primary", @click="login")
-        | 登录
+        | {{ $t('login') }}
       el-button(@click="navigate('http://www.sfc.itc.keio.ac.jp/ja/faq_sfc_1.html')")
-        | 忘记密码
+        | {{ $t('forgetPassword') }}
 </template>
 
 <script lang="ts">

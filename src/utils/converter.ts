@@ -19,9 +19,9 @@ export default {
     const date = new Date(Date.now());
     const res = new Date();
     if (month < 3 && date.getUTCMonth() > 8) {
-      // In Fall Semester, Assignments of Next Year
+      // In Fall Semester, Assignments in Next Year
       res.setUTCFullYear(date.getUTCFullYear() + 1);
-    } else if (date.getMonth() < 3 && month > 8) {
+    } else if (date.getUTCMonth() < 3 && month > 8) {
       // In Fall Semester, Assignments in Previous Year
       res.setUTCFullYear(date.getUTCFullYear() - 1);
     } else {
@@ -30,7 +30,7 @@ export default {
 
     res.setUTCMonth(month - 1, day);
     res.setUTCDate(day);
-    res.setUTCHours(hour - 9, min, 0); // UTC+9
+    res.setUTCHours(hour - 9, min, 0); // UTC +9 JST
     return res;
   },
 };

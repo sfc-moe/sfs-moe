@@ -3,11 +3,15 @@
   el-container
     el-aside.aside(width="70px")
       el-menu.menu(:collapse="true")
-        el-menu-item(index="1")
-          i.el-icon-date
-          span(slot="title")
-            | {{ $t('timetable') }}
-        el-menu-item(index="2")
+        //- el-menu-item(index="1", v-if="!($route.path === '/login')", @click="$router.push('/timetable')")
+        //-   i.el-icon-date
+        //-   span(slot="title")
+        //-     | {{ $t('timetable')}}
+        //- el-menu-item(index="0", v-if="!($route.path === '/login')", @click="$router.push('/timetable')")
+        //-   i.el-icon-date
+        //-   span(slot="title")
+        //-     | {{ $t ('bustimer')}}
+        el-menu-item(index="2", v-if="!($route.path === '/login')", @click="$router.push('/assignments')")
           i.el-icon-document
           span(slot="title")
             | {{ $t('assignments') }}
@@ -19,10 +23,10 @@
           i.el-icon-baseball
           span(slot="title")
             | {{ $t('goToWellness') }}
-        el-menu-item(index="5")
+        el-menu-item(index="5", @click="$router.push('/login')")
           i.el-icon-key
           span(slot="title")
-            | 登出
+            | {{ $t('logOut') }}
         el-submenu(index="6")
           template(slot="title")
             i.el-icon-chat-line-square
@@ -40,7 +44,7 @@
             el-menu-item
               | 한국어 (WIP)
             el-menu-item
-              | ภาษาไทย
+              | ภาษาไทย (WIP)
             el-menu-item
               | Tiếng việt (WIP)
             el-menu-item(@click="setLang('zh-cn')")
