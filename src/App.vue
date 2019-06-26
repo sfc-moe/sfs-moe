@@ -19,7 +19,7 @@
           i.el-icon-user
           span(slot="title")
             | {{ $t('goToSfs') }}
-        el-menu-item(index="4", @click="navigate('http://wellness.sfc.keio.ac.jp/')")
+        el-menu-item(index="4", @click="navigate('https://wellness.sfc.keio.ac.jp/')")
           i.el-icon-baseball
           span(slot="title")
             | {{ $t('goToWellness') }}

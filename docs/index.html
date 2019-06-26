@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="./assets/logo.png">
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+      body {
+        background-color: #159957;
+        background-image: linear-gradient(120deg, #155799, #159957);
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+        color: #fff;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 3.25rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+        font-style: italic;
+        color: #eee;
+        margin: 0 0 50px 0;
+      }
+
+      .btn {
+        display: inline-block;
+        margin-bottom: 1rem;
+        color: rgba(255,255,255,0.7);
+        background-color: rgba(255,255,255,0.08);
+        border-color: rgba(255,255,255,0.2);
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 0.3rem;
+        transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+        padding: 0.75rem 1rem;
+        text-decoration: none;
+      }
+
+      .btn:hover {
+        color: rgba(255,255,255,0.8);
+        text-decoration: none;
+        background-color: rgba(255,255,255,0.2);
+        border-color: rgba(255,255,255,0.3);
+        cursor: pointer;
+      }
+
+      .btn+.btn {
+        margin-left: 1rem;
+      }
+
+      .logo {
+        width: 200px;
+        margin-top: calc(50vh - 50px - 5.2rem - 100px);
+      }
+    </style>
+    <title>SFS Moe</title>
+  </head>
+  <body>
+    <img class="logo" src="./assets/logo.png">
+    <h1> sfs-moe </h1>
+    <h2> /* The Next Generation of SFC Students Addon */ </h2>
+    <div>
+        <a class="btn" href="https://github.com/keio-moe/sfs-moe"> View GitHub </a>
+        <a class="btn" href="https://chrome.google.com/webstore/detail/sfs-moe/dojlnoomebgjebddchhhnokgapndgefl"> Chrome Extension </a>
+        <a class="btn" href="./pkg/sfs_moe-0.0.1-fx.xpi"> Firefox Extension </a>
+        <a class="btn"> Changelog </a>
+    </div>
+  </body>
+</html>
+
