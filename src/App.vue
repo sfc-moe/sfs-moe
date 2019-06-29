@@ -49,7 +49,7 @@
               | Tiếng việt (WIP)
             el-menu-item(@click="setLang('zh-cn')")
               | 简体中文
-            el-menu-item
+            el-menu-item(@click="setLang('zh-tw')")
               | 繁體中文
             el-menu-item(@click="navigate('https://t.me/joinchat/BZajARWmEBaqW-4jpYXzJA')")
               | Contribute Your Language...
