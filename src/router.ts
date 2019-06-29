@@ -23,6 +23,6 @@ export default new Router({
       path: '/assignments',
       name: 'Assignments',
       component: Assignments,
-    }
+    },
   ],
 });
