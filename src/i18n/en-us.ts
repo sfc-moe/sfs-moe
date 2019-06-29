@@ -6,6 +6,7 @@ export default {
   forgetPassword: 'Forgot Password',
   goToSfs: 'Go to SFC-SFS',
   goToWellness: 'Go to Wellness',
+  loading: 'Loading',
   login: 'Login',
   logOut: 'Log Out',
   missed: 'Missed',

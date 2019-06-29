@@ -90,7 +90,7 @@ export default class Assignments extends Vue {
   private async fetchAssignments() {
     const loading = this.$loading({
       lock: true,
-      text: 'Loading',
+      text: this.$t('loading') as string,
       spinner: 'el-icon-loading',
       background: 'rgba(0, 0, 0, 0.7)',
     });

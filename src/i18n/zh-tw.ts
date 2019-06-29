@@ -6,6 +6,7 @@ export default {
   forgetPassword: '忘記密碼',
   goToSfs: '前往 SFC-SFS',
   goToWellness: '前往 Wellness',
+  loading: '載入中',
   login: '登入',
   logOut: '登出',
   missed: '已錯過',
