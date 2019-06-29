@@ -1,5 +1,5 @@
 export default {
-  assignments: '功課',
+  assignments: '課題',
   cnsPassword: 'CNS 密碼',
   cnsUsername: 'CNS 代號',
   finished: '已完成',
