@@ -82,6 +82,7 @@ export default class Home extends Vue {
   color #2c3e50
   width 700px
   height 600px
+  overflow-y scroll
 
 body
   margin 0
