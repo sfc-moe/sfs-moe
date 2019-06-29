@@ -2,7 +2,7 @@
 #assignments
   .upcoming
     h2
-      | Upcoming
+      | {{ $t('upcoming') }}
     report-card(
       v-for="a in assignmentsUpcoming",
       key="a.link",
@@ -13,7 +13,7 @@
       :deadline="a.deadline")
   .missed
     h2
-      | Missed
+      | {{ $t('missed') }}
     report-card(
       v-for="a in assignmentsMissed",
       key="a.link",
@@ -24,7 +24,7 @@
       :deadline="a.deadline")
   .finished
     h2
-      | Finished
+      | {{ $t('finished') }}
     report-card(
       v-for="a in assignmentsFinished",
       key="a.link",
