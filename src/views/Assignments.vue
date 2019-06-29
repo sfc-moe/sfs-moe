@@ -68,8 +68,7 @@ export default class Assignments extends Vue {
     return this.assignments
       .filter((a) => a.submitted === false)
       .filter((a) => a.deadline >= new Date(Date.now()))
-      .sort((d1, d2) => d1.deadline.getTime() - d2.deadline.getTime())
-      .reverse();
+      .sort((d1, d2) => d1.deadline.getTime() - d2.deadline.getTime());
   }
 
   private get assignmentsMissed(): Assignment[] {
