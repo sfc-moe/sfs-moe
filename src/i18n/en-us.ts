@@ -8,6 +8,7 @@ export default {
   goToWellness: 'Go to Wellness',
   loading: 'Loading',
   login: 'Login',
+  loginFailed: 'Login Failed. Please check your Username or Password.',
   logOut: 'Log Out',
   missed: 'Missed',
   passwordSecurity: 'CNS username and password would only be kept in the plugin. We won\'t send it to any third party.',

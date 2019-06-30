@@ -8,6 +8,7 @@ export default {
   goToWellness: '前往 Wellness',
   loading: '載入中',
   login: '登入',
+  loginFailed: '登入失敗，請檢查代號或密碼。',
   logOut: '登出',
   missed: '已錯過',
   passwordSecurity: 'CNS 代號和密碼僅會存儲在擴展程式內部，不會發送給任何第三方。',

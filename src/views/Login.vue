@@ -51,7 +51,7 @@ export default class Login extends Vue {
     const dom = new DOMParser().parseFromString(await res.text(), 'text/html');
     const meta = dom.querySelector('meta[http-equiv~="refresh"]');
     if (meta === null) {
-      this.$message.error('登录失败，用户名或密码错误。');
+      this.$message.error(this.$t('loginFailed') as string);
       this.username = '';
       this.password = '';
       this.sfsAuth.setProfile(null);

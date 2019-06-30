@@ -8,6 +8,7 @@ export default {
   goToWellness: '前往 Wellness',
   loading: '加载中',
   login: '登录',
+  loginFailed: '登录失败。请检查用户名或密码。',
   logOut: '登出',
   missed: '已错过',
   passwordSecurity: 'CNS 用户名密码只会被保存在插件本地，不会被发送给任何第三方。',
