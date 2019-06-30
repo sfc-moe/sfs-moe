@@ -7,27 +7,27 @@
         //-   i.el-icon-date
         //-   span(slot="title")
         //-     | {{ $t('timetable')}}
-        //- el-menu-item(index="0", v-if="!($route.path === '/login')", @click="$router.push('/timetable')")
-        //-   i.el-icon-date
-        //-   span(slot="title")
-        //-     | {{ $t ('bustimer')}}
         el-menu-item(index="2", v-if="!($route.path === '/login')", @click="$router.push('/assignments')")
           i.el-icon-document
           span(slot="title")
             | {{ $t('assignments') }}
-        el-menu-item(index="3", @click="navigate('https://vu.sfc.keio.ac.jp/sfc-sfs/')")
+        //- el-menu-item(index="3", v-if="!($route.path === '/login')", @click="$router.push('/timetable')")
+        //-   i.el-icon-guide
+        //-   span(slot="title")
+        //-     | {{ $t ('bustimer')}}
+        el-menu-item(index="4", @click="navigate('https://vu.sfc.keio.ac.jp/sfc-sfs/')")
           i.el-icon-user
           span(slot="title")
             | {{ $t('goToSfs') }}
-        el-menu-item(index="4", @click="navigate('https://wellness.sfc.keio.ac.jp/')")
+        el-menu-item(index="5", @click="navigate('https://wellness.sfc.keio.ac.jp/')")
           i.el-icon-baseball
           span(slot="title")
             | {{ $t('goToWellness') }}
-        el-menu-item(index="5", @click="$router.push('/login')")
+        el-menu-item(index="6", @click="$router.push('/login')")
           i.el-icon-key
           span(slot="title")
             | {{ $t('logOut') }}
-        el-submenu(index="6")
+        el-submenu(index="7")
           template(slot="title")
             i.el-icon-chat-line-square
             span(slot="title")

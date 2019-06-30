@@ -23,7 +23,6 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import * as httpm from 'typed-rest-client/HttpClient';
 import * as queryString from 'query-string';
 import consts from '@/utils/consts';
 import SfsAuth from '@/utils/sfs-auth';
@@ -31,22 +30,25 @@ import SfsAuth from '@/utils/sfs-auth';
 @Component({})
 export default class Login extends Vue {
   private sfsAuth: SfsAuth = new SfsAuth();
-  private http = new httpm.HttpClient(window.navigator.userAgent);
   private username: string = '';
   private password: string = '';
   private autoLogin: boolean = false;
 
   private navigate(url: string) { window.open(url); }
   private async login() {
-    const res = await this.http.post(
-      `${consts.SFS_HOST}/login.cgi`,
-      queryString.stringify({
+    const res = await fetch(`${consts.SFS_HOST}/login.cgi`, {
+      method: 'POST',
+      body: queryString.stringify({
         u_login: this.username,
         u_pass: this.password,
         lang: 'ja',
       }),
-    );
-    const dom = new DOMParser().parseFromString(await res.readBody(), 'text/html');
+      headers: {
+        'content-type': 'application/x-www-form-urlencoded',
+      },
+    });
+
+    const dom = new DOMParser().parseFromString(await res.text(), 'text/html');
     const meta = dom.querySelector('meta[http-equiv~="refresh"]');
     if (meta === null) {
       this.$message.error('登录失败，用户名或密码错误。');

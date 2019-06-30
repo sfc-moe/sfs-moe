@@ -17,7 +17,6 @@
     "query-string": "^6.5.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
-    "typed-rest-client": "^1.4.0",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-i18n": "^8.11.2",
