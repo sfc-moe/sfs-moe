@@ -32,4 +32,3 @@ export default class ReportCard extends Vue {
   cursor pointer
   color #fff
 </style>
-
