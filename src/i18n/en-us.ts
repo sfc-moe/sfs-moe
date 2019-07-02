@@ -13,6 +13,6 @@ export default {
   missed: 'Missed',
   passwordSecurity: 'CNS username and password would only be kept in the plugin. We won\'t send it to any third party.',
   upcoming: 'Upcoming',
-  rememberPassword: 'Remember',
+  rememberPassword: 'Auto Login',
   timetable: 'Timetable',
 };

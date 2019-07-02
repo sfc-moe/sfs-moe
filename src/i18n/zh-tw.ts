@@ -13,6 +13,6 @@ export default {
   missed: '已錯過',
   passwordSecurity: 'CNS 代號和密碼僅會存儲在擴展程式內部，不會發送給任何第三方。',
   upcoming: '即將到來',
-  rememberPassword: '記住密碼',
+  rememberPassword: '自動登入',
   timetable: '時間表',
 };

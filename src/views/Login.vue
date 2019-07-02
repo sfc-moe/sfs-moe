@@ -52,9 +52,6 @@ export default class Login extends Vue {
     const meta = dom.querySelector('meta[http-equiv~="refresh"]');
     if (meta === null) {
       this.$message.error(this.$t('loginFailed') as string);
-      this.username = '';
-      this.password = '';
-      this.sfsAuth.setProfile(null);
       return;
     }
     if (this.autoLogin) { this.sfsAuth.setProfile({ username: this.username, password: this.password }); }
@@ -75,8 +72,15 @@ export default class Login extends Vue {
     }
   }
 
+  private async autoLoginTrigger() {
+    await this.fetchStorage();
+    if (this.autoLogin) {
+      await this.login();
+    }
+  }
+
   private mounted() {
-    this.fetchStorage();
+    this.autoLoginTrigger();
   }
 }
 </script>

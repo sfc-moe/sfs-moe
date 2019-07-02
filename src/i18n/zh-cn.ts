@@ -13,6 +13,6 @@ export default {
   missed: '已错过',
   passwordSecurity: 'CNS 用户名密码只会被保存在插件本地，不会被发送给任何第三方。',
   upcoming: '即将到来',
-  rememberPassword: '记住密码',
+  rememberPassword: '自动登录',
   timetable: '日程表',
 };

@@ -23,7 +23,7 @@
           i.el-icon-baseball
           span(slot="title")
             | {{ $t('goToWellness') }}
-        el-menu-item(index="6", @click="$router.push('/login')")
+        el-menu-item(index="6", @click="logOut")
           i.el-icon-key
           span(slot="title")
             | {{ $t('logOut') }}
@@ -66,13 +66,22 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import SfsAuth from '@/utils/sfs-auth';
 
 @Component({})
 export default class Home extends Vue {
+  private sfsAuth: SfsAuth = new SfsAuth();
+
   private navigate(url: string) { window.open(url); }
+
   private setLang(lang: string) {
     this.$i18n.locale = lang;
     window.localStorage.setItem('language', lang);
+  }
+
+  private async logOut() {
+    await this.sfsAuth.setProfile(null);
+    this.$router.push('/login');
   }
 }
 </script>
