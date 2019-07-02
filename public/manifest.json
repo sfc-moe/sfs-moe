@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "sfs-moe",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "browser_action": {
     "default_popup": "index.html"
   },
@@ -12,5 +12,10 @@
   "permissions": [
     "storage",
     "https://vu.sfc.keio.ac.jp/"
-  ]
+  ],
+  "applications": {
+    "gecko": {
+      "update_url": "https://sfs.keio.moe/updates.json"
+    }
+  }
 }

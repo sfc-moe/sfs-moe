@@ -1,0 +1,12 @@
+{
+  "addons": {
+    "{8d9e603f-c083-42a3-a5f8-ef1539aae234}": {
+      "updates": [
+        { "version": "0.0.1",
+          "update_link": "https://sfs.keio.moe/pkg/sfs_moe-0.0.1-fx.xpi" },
+        { "version": "0.0.2",
+          "update_link": "https://sfs.keio.moe/pkg/sfs_moe-0.0.2-fx.xpi" }
+      ]
+    }
+  }
+}
