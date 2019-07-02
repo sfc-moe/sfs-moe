@@ -7,12 +7,12 @@ window.onload = () => {
 
   // Setup options
   let refreshTrigger = window.sessionStorage.getItem('refreshTrigger') === 'true';
-  let time = 10;
+  let time = 9;
   
   // Setup the UI
   const text = document.createElement('h4');
   text.className = 'w3-text-teal';
-  text.innerText = '自動同期 Auto Refresh (10s)';
+  text.innerText = `自動同期 Auto Refresh (${time}s)`;
   const lbl = document.createElement('label');
   lbl.className = 'switch';
 
