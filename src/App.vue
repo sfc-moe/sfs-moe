@@ -87,11 +87,15 @@ export default class Home extends Vue {
 </script>
 
 <style lang="stylus">
+
 #app
   color #2c3e50
   width 700px
   height 600px
   overflow-y scroll
+  @media screen and (min-height: 601px)
+    width 100%
+    height 100vh
 
 body
   margin 0
@@ -101,10 +105,15 @@ body
   font-family "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
+  @media screen and (min-height: 601px)
+    width 100%
+    height 100vh
 
 .aside
   height 600px
   position fixed
+  @media screen and (min-height: 601px)
+    height 100vh
 
 .main
   margin-left 70px
