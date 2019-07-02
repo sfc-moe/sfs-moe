@@ -19,7 +19,9 @@
     {
       "matches": ["https://vu5.sfc.keio.ac.jp/slide/*"],
       "js": ["injection/slider.js"],
-      "css": ["injection/slider.css"]
+      "css": ["injection/slider.css"],
+      "run_at": "document_start",
+      "all_frames": true
     }
   ],
   "background": {
