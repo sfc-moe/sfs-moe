@@ -10,6 +10,7 @@ el-card.report-card(shadow="hover", @click.native="openAssignment", :body-style=
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
+import { browser } from 'webextension-polyfill-ts';
 import consts from '@/utils/consts';
 
 @Component({})
@@ -21,7 +22,7 @@ export default class ReportCard extends Vue {
   @Prop(String) private bgColor!: string;
 
   private openAssignment() {
-    chrome.tabs.create({ url: `${consts.SFS_HOST}/sfs_class/student/${this.href}` });
+    browser.tabs.create({ url: `${consts.SFS_HOST}/sfs_class/student/${this.href}` });
   }
 }
 </script>

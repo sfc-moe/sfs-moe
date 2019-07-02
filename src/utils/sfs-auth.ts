@@ -1,4 +1,4 @@
-import chromep from '@/utils/chromep';
+import { browser } from 'webextension-polyfill-ts';
 
 interface UserCredential {
   username: string;
@@ -7,23 +7,23 @@ interface UserCredential {
 
 export default class SfsAuth {
   public async getProfile(): Promise<UserCredential | null> {
-    const res = await chromep.storage.local.get('profile');
+    const res = await browser.storage.local.get('profile');
     if (res === null) { return null; }
     return JSON.parse(res.profile);
   }
 
   public async setProfile(state: UserCredential | null): Promise<void> {
     if (state === null) {
-      chrome.storage.local.remove('profile');
+      await browser.storage.local.remove('profile');
       return;
     }
-    await chromep.storage.local.set({
+    await browser.storage.local.set({
       profile: JSON.stringify(state),
     });
   }
 
   public async getToken(): Promise<string> {
-    const result = await chromep.storage.local.get('token');
+    const result = await browser.storage.local.get('token');
     if (result === null) {
       window.location.hash = '/';
       return '';
@@ -32,7 +32,7 @@ export default class SfsAuth {
   }
 
   public async setToken(token: string) {
-    await chromep.storage.local.set({
+    await browser.storage.local.set({
       token,
     });
   }

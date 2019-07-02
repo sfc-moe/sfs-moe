@@ -12,7 +12,6 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "chrome",
       "webpack-env",
       "jest"
     ],
