@@ -1,0 +1,18 @@
+export default {
+  assignments: '숙제',
+  cnsPassword: 'CNS 암호',
+  cnsUsername: 'CNS 사용자 이름',
+  finished: 'Finished',
+  forgetPassword: 'Forgot Password',
+  goToSfs: 'Go to SFC-SFS',
+  goToWellness: 'Go to Wellness',
+  loading: '로딩',
+  login: '로그인',
+  loginFailed: 'Login Failed. Please check your Username or Password.',
+  logOut: '로그 아웃',
+  missed: 'Missed',
+  passwordSecurity: 'CNS username and password would only be kept in the plugin. We won\'t send it to any third party.',
+  upcoming: 'Upcoming',
+  rememberPassword: 'Auto Login',
+  timetable: '시간표',
+};

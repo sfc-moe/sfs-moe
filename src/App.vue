@@ -39,9 +39,7 @@
               | 日本語
             el-menu-item(@click="setLang('en-us')")
               | English
-            el-menu-item
-              | हिंदी (WIP)
-            el-menu-item
+            el-menu-item(@click="setLang('ko-kr')")
               | 한국어 (WIP)
             el-menu-item
               | ภาษาไทย (WIP)

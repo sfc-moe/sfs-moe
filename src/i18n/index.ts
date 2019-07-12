@@ -1,9 +1,10 @@
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
 import enUS from './en-us';
+import jaJP from './ja-jp';
+import koKr from './ko-kr';
 import zhCN from './zh-cn';
 import zhTW from './zh-tw';
-import jaJP from './ja-jp';
 Vue.use(VueI18n);
 
 export default new VueI18n({
@@ -11,8 +12,9 @@ export default new VueI18n({
   fallbackLocale: 'en-us',
   messages: {
     'en-us': enUS,
+    'ko-kr': koKr,
+    'ja-jp': jaJP,
     'zh-cn': zhCN,
     'zh-tw': zhTW,
-    'ja-jp': jaJP,
   },
 });
