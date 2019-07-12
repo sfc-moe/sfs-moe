@@ -8,7 +8,7 @@ export default {
   goToWellness: 'Wellness ヘ',
   loading: 'ロード中',
   login: 'ログイン',
-  loginFailed: 'Login Failed. Please check your Username or Password.',
+  loginFailed: 'ログインに失敗しました。無効なユーザー名またはパスワードです。',
   logOut: 'ログアウト',
   missed: '締め切りを過ぎた',
   passwordSecurity: 'この拡張機能は、ユーザー名・パスワードをローカルに保存してます。第三者にデータを提供しません。',
