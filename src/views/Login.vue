@@ -2,7 +2,7 @@
 #login
   .logo-container
     img.logo(src="/static/logo.png")
-  el-form.form(label-position="right", label-width="120px")
+  el-form.form(label-position="right", label-width="150px")
     el-form-item(:label="$t('cnsUsername')")
       el-input(v-model="username")
     el-form-item(:label="$t('cnsPassword')")
