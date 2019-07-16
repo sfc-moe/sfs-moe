@@ -1,5 +1,5 @@
 export default {
-  assignments: 'असाइनमेट'
+  assignments: 'असाइनमेट',
   cnsPassword: 'CNS का पासवर्ड',
   cnsUsername: 'CNS का उपयोगकर्ता नाम',
   finished: 'समाप्त',
