@@ -22,6 +22,12 @@
       "css": ["injection/slider.css"],
       "run_at": "document_start",
       "all_frames": true
+    },
+    {
+      "matches": ["https://vu.sfc.keio.ac.jp/sfc-sfs/*"],
+      "js": ["injection/sfs.js"],
+      "run_at": "document_start",
+      "all_frames": true
     }
   ],
   "background": {

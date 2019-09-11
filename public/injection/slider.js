@@ -1,9 +1,9 @@
 window.onload = () => {
   // Env detection
   const frame = document.getElementsByClassName("frame")[0];
-  if (frame === undefined) return 0;
+  if (frame === undefined) return;
   const updateBtn = document.getElementsByClassName('update')[0];
-  if (updateBtn === undefined) return 0;
+  if (updateBtn === undefined) return;
 
   // Setup options
   let refreshTrigger = window.sessionStorage.getItem('refreshTrigger') === 'true';
