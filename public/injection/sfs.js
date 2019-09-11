@@ -2,8 +2,11 @@ window.onload = () => {
   const dom = document.querySelector("a[href='/sfc-sfs/']");
   if (dom === null) return;
   const currentUrlParams = new URLSearchParams(window.location.search);
+  const id = currentUrlParams.get('id');
+  if (id === null) return;
+
   const urlParams = {
-    id: currentUrlParams.get('id'),
+    id,
     type: currentUrlParams.get('type'),
     mode: 0,
     lang: currentUrlParams.get('lang'),
