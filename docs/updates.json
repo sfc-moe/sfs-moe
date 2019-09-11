@@ -9,7 +9,9 @@
         { "version": "0.0.3",
           "update_link": "https://sfs.keio.moe/pkg/sfs_moe-0.0.3-fx.xpi" },
         { "version": "0.0.4",
-          "update_link": "https://sfs.keio.moe/pkg/sfs_moe-0.0.4-fx.xpi" }
+          "update_link": "https://sfs.keio.moe/pkg/sfs_moe-0.0.4-fx.xpi" },
+        { "version": "0.0.5",
+          "update_link": "https://sfs.keio.moe/pkg/sfs_moe-0.0.5-fx.xpi" }
       ]
     }
   }
