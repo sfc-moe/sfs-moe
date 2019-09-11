@@ -1,7 +1,7 @@
 export default {
   assignments: '숙제',
-  cnsPassword: 'CNS 암호',
-  cnsUsername: 'CNS 사용자 이름',
+  cnsPassword: 'CNS 비밀번호',
+  cnsUsername: 'CNS 아이디',
   finished: 'Finished',
   forgetPassword: 'Forgot Password',
   goToSfs: 'Go to SFC-SFS',
