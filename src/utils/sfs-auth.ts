@@ -36,4 +36,19 @@ export default class SfsAuth {
       token,
     });
   }
+
+  public async getFix(): Promise<string> {
+    const result = await browser.storage.local.get('dix');
+    if (result === null) {
+      window.location.hash = '/';
+      return '';
+    }
+    return result.fix;
+  }
+
+  public async setFix(fix: string) {
+    await browser.storage.local.set({
+      fix,
+    });
+  }
 }

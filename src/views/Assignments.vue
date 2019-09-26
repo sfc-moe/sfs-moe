@@ -97,7 +97,7 @@ export default class Assignments extends Vue {
     const query = queryString.stringify({
       id: await this.sfsAuth.getToken(),
       term: converter.getTerm(),
-      fix: 1,
+      fix: await this.sfsAuth.getFix(),
       lang: 'ja',
     });
 

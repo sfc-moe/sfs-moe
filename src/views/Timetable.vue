@@ -29,7 +29,7 @@ export default class Timetable extends Vue {
     const query = queryString.stringify({
       id: await this.sfsAuth.getToken(),
       term: converter.getTerm(),
-      fix: 1,
+      fix: await this.sfsAuth.getFix(),
       lang: 'ja',
     });
 
@@ -40,6 +40,7 @@ export default class Timetable extends Vue {
       const a = (ele as HTMLLinkElement);
       return a.href;
     }));
+
     const timetable = await Promise.all(Array.from(links).map(async (link) => {
       const resAssignment = await fetch(link);
       const bodyStr = decoder.decode(await resAssignment.arrayBuffer());

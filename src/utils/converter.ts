@@ -11,7 +11,7 @@ export default {
       // Spring Semester of This Year
       return `${year}s`;
     } else {
-      return `{year}f`;
+      return `${year}f`;
     }
   },
 

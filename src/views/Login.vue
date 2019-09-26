@@ -60,6 +60,25 @@ export default class Login extends Vue {
     const url = meta.attributes.getNamedItem('content')!.nodeValue!.slice(7);
     const params = queryString.parse(new URL(url).search);
     await this.sfsAuth.setToken(params.id as string);
+
+    // Get if the timetable is fixed
+    const query = queryString.stringify({
+      id: (params.id as string),
+      type: 's',
+      mode: 1,
+      lang: 'ja',
+    });
+
+    const decoder = new TextDecoder('euc-jp');
+    const resTimetable = await fetch(`${consts.SFS_HOST}/portal_s/s01.cgi?${query}`);
+    const domTimetable = new DOMParser().parseFromString(
+      await decoder.decode(await resTimetable.arrayBuffer()), 'text/html');
+    const frame = domTimetable.querySelector('#frame_set');
+    const frameUrl = frame!.attributes.getNamedItem('src')!.nodeValue;
+    const frameParams = queryString.parse(frameUrl!);
+    const fix = (frameParams.fix as string);
+    await this.sfsAuth.setFix(fix);
+
     this.$router.push('/assignments');
   }
 
