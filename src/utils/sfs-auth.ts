@@ -38,7 +38,7 @@ export default class SfsAuth {
   }
 
   public async getFix(): Promise<string> {
-    const result = await browser.storage.local.get('dix');
+    const result = await browser.storage.local.get('fix');
     if (result === null) {
       window.location.hash = '/';
       return '';
