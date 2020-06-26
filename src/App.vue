@@ -60,17 +60,20 @@
         img.logo(src="/static/logo.png")
         span.footer-span
           | Made with ❤️️ by 
-          a(href="https://github.com/sfc-moe")
+          a(:href="organizationLink" @click.prevent="navigate(organizationLink)")
             | sfc.moe
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import consts from '@/utils/consts';
 import SfsAuth from '@/utils/sfs-auth';
 
 @Component({})
 export default class Home extends Vue {
   private sfsAuth: SfsAuth = new SfsAuth();
+
+  private data() { return { organizationLink: consts.ORGANIZATION_LINK}; }
 
   private navigate(url: string) { window.open(url); }
 
