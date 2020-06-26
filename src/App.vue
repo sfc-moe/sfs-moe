@@ -60,8 +60,8 @@
         img.logo(src="/static/logo.png")
         span.footer-span
           | Made with ❤️️ by 
-          a(href="https://github.com/keio-moe")
-            | keio.moe
+          a(href="https://github.com/sfc-moe")
+            | sfc.moe
 </template>
 
 <script lang="ts">
