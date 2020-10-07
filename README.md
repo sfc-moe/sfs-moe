@@ -1,5 +1,8 @@
 # sfs-moe
 
+This project is archived, due to there is no longer SFC-SFS system.
+Future devs would be moved to [sol-moe](https://github.com/sfc-moe/sol-moe).
+
 ## Project setup
 ```
 npm install
